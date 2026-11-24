@@ -6,7 +6,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
+      setScrolled(window.scrollY > 40)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
@@ -22,17 +22,17 @@ function Navbar() {
           </div>
         </a>
 
-        <div className="nav-links">
-          <a href="#features">Features</a>
-          <a href="#sports">Sports</a>
-          <a href="#pricing">Pricing</a>
-          <a href="#download">Download</a>
-          <a href="#testimonials">Reviews</a>
+        <div className={`nav-links ${mobileOpen ? 'mobile-visible' : ''}`}>
+          <a href="#live-now" onClick={() => setMobileOpen(false)}>Live Turfs</a>
+          <a href="#volunteer" onClick={() => setMobileOpen(false)}>Volunteer</a>
+          <a href="#pricing" onClick={() => setMobileOpen(false)}>Pricing</a>
+          <a href="#download" onClick={() => setMobileOpen(false)}>Mobile App</a>
+          <a href="#backed" onClick={() => setMobileOpen(false)}>Endorsements</a>
         </div>
 
         <div className="nav-actions">
           <button className="btn btn-secondary">Log In</button>
-          <button className="btn btn-primary">Get Started</button>
+          <a href="#live-now" className="btn btn-primary">Book Now</a>
         </div>
 
         <button
@@ -50,4 +50,3 @@ function Navbar() {
 }
 
 export default Navbar
-

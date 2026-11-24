@@ -1,76 +1,84 @@
 import React from 'react'
 
 const checkIcon = (
-  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="20 6 9 17 4 12"></polyline>
   </svg>
 )
 
 const plans = [
   {
-    name: 'Starter',
-    description: 'Perfect for casual players',
+    name: 'BASIC / STARTER',
+    description: 'Ideal for weekend athletes and casual players',
+    currency: 'INR',
     price: 'Free',
     amount: '0',
-    period: '',
+    period: '/ month',
+    badge: null,
     features: [
-      'Browse and search turfs',
-      'Basic booking (up to 3/month)',
-      'Access public tournaments',
-      'Standard gear catalog',
-      'Community chat access'
+      'Browse & search all 500+ turfs',
+      'Instant slot booking (up to 3 per month)',
+      'Join public tournaments & leagues',
+      'Standard member gear discounts (5% off)',
+      'Player profile & match history',
+      'Community player chat'
     ],
     cta: 'Get Started Free',
     featured: false
   },
   {
-    name: 'Pro Player',
-    description: 'For serious athletes',
+    name: 'PRO ATHLETE',
+    description: 'For competitive players & frequent teams',
+    currency: 'INR',
     price: 'INR',
     amount: '499',
-    period: '/mo',
+    period: '/ month',
+    badge: 'MOST POPULAR',
     features: [
-      'Unlimited turf bookings',
-      'Priority time slot access',
-      'Create & manage tournaments',
-      'Exclusive gear discounts (15% off)',
-      'Performance stats dashboard',
-      'Free cancellation anytime'
+      'Unlimited turf & court bookings',
+      'Priority peak-hour slot reservations',
+      'Zero booking cancellation fees',
+      'Organize up to 2 public tournaments/mo',
+      'Pro gear discounts (15% off brand apparel)',
+      'Detailed player analytics & win rates',
+      'SMS & WhatsApp booking reminders'
     ],
-    cta: 'Go Pro',
-    featured: true,
-    popular: true
+    cta: 'Go Pro Now',
+    featured: true
   },
   {
-    name: 'Team',
-    description: 'Built for clubs and teams',
+    name: 'CLUB & ENTERPRISE',
+    description: 'For sports academies, teams & organizers',
+    currency: 'INR',
     price: 'INR',
     amount: '1,499',
-    period: '/mo',
+    period: '/ month',
+    badge: 'TEAM CHOICE',
     features: [
-      'Everything in Pro Player',
-      'Team roster management',
-      'Bulk booking discounts',
-      'Dedicated team page',
-      'Priority support line',
-      'Custom tournament branding'
+      'Everything in Pro Athlete plan',
+      'Full roster & squad management',
+      'Automated tournament bracket builder',
+      'Bulk slot booking discounts up to 25%',
+      'Custom tournament branding & certificates',
+      'Dedicated facility account manager',
+      'Direct payout dashboard for ticket sales'
     ],
-    cta: 'Contact Sales',
+    cta: 'Upgrade Team',
     featured: false
   }
 ]
 
 function Pricing() {
   return (
-    <section className="pricing section" id="pricing">
+    <section className="section pricing" id="pricing">
       <div className="container">
         <div className="pricing-header">
-          <div className="section-label">Pricing</div>
+          <div className="section-label">Membership & Plans</div>
           <h2 className="section-title">
             SIMPLE, <span className="highlight">TRANSPARENT</span> PRICING
           </h2>
           <p className="section-subtitle">
-            No hidden fees. No surprise charges. Pick a plan that matches your game.
+            Choose a plan tailored to your playing frequency. Upgrade, downgrade, or cancel anytime.
           </p>
         </div>
 
@@ -80,30 +88,31 @@ function Pricing() {
               key={index}
               className={`pricing-card fade-in ${plan.featured ? 'featured' : ''}`}
             >
-              {plan.popular && (
-                <div className="pricing-popular">Most Popular</div>
+              {plan.badge && (
+                <div className="pricing-popular">{plan.badge}</div>
               )}
               <div className="pricing-plan-name">{plan.name}</div>
               <div className="pricing-plan-desc">{plan.description}</div>
+
               <div className="pricing-price">
-                {plan.price !== 'Free' && (
-                  <span className="pricing-currency">{plan.price}</span>
-                )}
-                <span className="pricing-amount">
-                  {plan.price === 'Free' ? 'Free' : plan.amount}
+                <span className="pricing-currency">
+                  {plan.price === 'Free' ? '' : plan.currency}
                 </span>
-                {plan.period && (
-                  <span className="pricing-period">{plan.period}</span>
-                )}
+                <span className="pricing-amount">
+                  {plan.price === 'Free' ? 'FREE' : plan.amount}
+                </span>
+                <span className="pricing-period">{plan.period}</span>
               </div>
+
               <div className="pricing-features">
                 {plan.features.map((feature, i) => (
                   <div key={i} className="pricing-feature">
                     <span className="check-icon">{checkIcon}</span>
-                    {feature}
+                    <span>{feature}</span>
                   </div>
                 ))}
               </div>
+
               <button
                 className={`btn ${plan.featured ? 'btn-primary' : 'btn-secondary'}`}
               >
@@ -118,4 +127,3 @@ function Pricing() {
 }
 
 export default Pricing
-
