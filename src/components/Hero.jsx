@@ -100,23 +100,21 @@ function Hero() {
           </div>
         </div>
 
-        {/* 4 Category Quick Selection Cards (Mobile Scroll Snap) */}
-        <div className="hero-category-cards-wrapper">
-          <div className="hero-category-cards">
-            {categories.map((cat) => (
-              <div
-                key={cat.id}
-                className={`category-card ${activeCategory === cat.id ? 'active' : ''}`}
-                onClick={() => setActiveCategory(cat.id)}
-              >
-                <div className="category-card-icon">{cat.icon}</div>
-                <div className="category-card-content">
-                  <h4>{cat.title}</h4>
-                  <p>{cat.subtitle}</p>
-                </div>
+        {/* 4 Category Quick Selection Cards (Responsive 4-col desktop, 2x2 mobile) */}
+        <div className="hero-category-cards">
+          {categories.map((cat) => (
+            <div
+              key={cat.id}
+              className={`category-card ${activeCategory === cat.id ? 'active' : ''}`}
+              onClick={() => setActiveCategory(cat.id)}
+            >
+              <div className="category-card-icon">{cat.icon}</div>
+              <div className="category-card-content">
+                <h4>{cat.title}</h4>
+                <p>{cat.subtitle}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
 
         {/* Quick Mobile Stats Strip */}
