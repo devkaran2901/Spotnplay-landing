@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import LiveSection from './components/LiveSection'
@@ -11,62 +11,47 @@ import BackedByBest from './components/BackedByBest'
 import CTA from './components/CTA'
 import NewsletterSection from './components/NewsletterSection'
 import Footer from './components/Footer'
+import StickyMobileBar from './components/StickyMobileBar'
 
 function App() {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible')
-          }
-        })
-      },
-      { threshold: 0.1 }
-    )
-
-    document.querySelectorAll('.fade-in').forEach((el) => {
-      observer.observe(el)
-    })
-
-    return () => observer.disconnect()
-  }, [])
-
   return (
     <div className="app">
       <Navbar />
       <main>
-        {/* Top Hero with Category Cards & Booking Engine */}
+        {/* Mobile-First Hero with App Highlights & Instant Search */}
         <Hero />
 
         {/* Live Right Now Venues & Tournaments */}
         <LiveSection />
 
-        {/* Sports Categories Strip */}
+        {/* Popular Sports Disciplines Carousel */}
         <SportsRow />
 
         {/* List Your Turf Partner Banner */}
         <PartnerBanner />
 
-        {/* Volunteer & Organize Tournaments */}
+        {/* Volunteer & Tournament Organizers */}
         <VolunteerSection />
 
-        {/* Simple, Transparent Pricing */}
+        {/* Simple, Transparent Pricing with Plain White Cards */}
         <Pricing />
 
-        {/* Mobile App Section */}
+        {/* Mobile App Section & Feature Breakdown */}
         <AppDownload />
 
-        {/* Backed By The Best Endorsement */}
+        {/* Backed By The Best Endorsement Card */}
         <BackedByBest />
 
         {/* Ready to Play CTA */}
         <CTA />
 
-        {/* Newsletter Signup Box */}
+        {/* Stay In The Game Newsletter */}
         <NewsletterSection />
       </main>
       <Footer />
+
+      {/* Floating Bottom Navigation Bar for Mobile Screen Users */}
+      <StickyMobileBar />
     </div>
   )
 }
