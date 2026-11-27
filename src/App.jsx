@@ -3,7 +3,8 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import LiveSection from './components/LiveSection'
 import SportsRow from './components/SportsRow'
-import PartnerBanner from './components/PartnerBanner'
+import CoachFormSection from './components/CoachFormSection'
+import PartnerSection from './components/PartnerSection'
 import VolunteerSection from './components/VolunteerSection'
 import Pricing from './components/Pricing'
 import AppDownload from './components/AppDownload'
@@ -27,14 +28,17 @@ function App() {
         {/* Popular Sports Disciplines Carousel */}
         <SportsRow />
 
-        {/* List Your Turf Partner Banner */}
-        <PartnerBanner />
+        {/* Join as Coach Registration Form */}
+        <CoachFormSection />
 
         {/* Volunteer & Tournament Organizers */}
         <VolunteerSection />
 
-        {/* Simple, Transparent Pricing with Plain White Cards */}
+        {/* Simple, Transparent Pricing */}
         <Pricing />
+
+        {/* List Your Turf Partner Section */}
+        <PartnerSection />
 
         {/* Mobile App Section & Feature Breakdown */}
         <AppDownload />
