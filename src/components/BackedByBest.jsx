@@ -5,58 +5,74 @@ function BackedByBest() {
     <section className="section backed-section" id="backed">
       <div className="container">
         <div className="backed-header">
-          <div className="section-label">Endorsements & Partners</div>
-          <h2 className="section-title">
-            BACKED BY <span className="highlight">THE BEST</span>
-          </h2>
+          <div className="amber-eyebrow-line centered">ON THE SIDELINES</div>
+          <h2 className="section-title">BACKED BY THE BEST</h2>
           <p className="section-subtitle">
-            Trusted by premier sports academies, university athletic boards, and professional players across the country.
+            Grateful for the partners and institutions powering spotNplay tournaments and university sports communities.
           </p>
         </div>
 
-        <div className="backed-card-wrapper">
-          <div className="backed-highlight-card fade-in">
-            <div className="backed-sports-emblem">
-              <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <path d="M4.93 4.93l14.14 14.14"></path>
-                <path d="M19.07 4.93L4.93 19.07"></path>
-              </svg>
-            </div>
+        <div className="backed-partner-card">
+          <div className="backed-logo-box">
+            <svg
+              width="76"
+              height="76"
+              viewBox="0 0 120 120"
+              role="img"
+              aria-label="Lovely Professional University Logo"
+            >
+              <circle cx="60" cy="60" r="56" fill="#FFFFFF" stroke="#111827" strokeWidth="2.5" />
+              <circle cx="60" cy="60" r="41" fill="#F97316" stroke="#111827" strokeWidth="2" />
+              <g fill="#111827">
+                <polygon points="60,22 52,60 68,60" />
+                <polygon points="88,33 56,57 67,67" />
+                <polygon points="99,60 60,54 60,66" />
+                <polygon points="32,33 53,67 64,57" />
+                <polygon points="21,60 60,66 60,54" />
+                <polygon points="40,91 64,61 52,55" />
+                <polygon points="80,91 68,55 56,61" />
+              </g>
+              <circle cx="60" cy="60" r="41" fill="none" stroke="#111827" strokeWidth="2" />
+              <defs>
+                <path id="lpuTopArc" d="M 16,60 A 44,44 0 1,1 104,60" />
+                <path id="lpuBottomArc" d="M 22,74 A 42,42 0 0,0 98,74" />
+              </defs>
+              <text fontSize="7.4" fontWeight="800" fill="#111827" letterSpacing="0.8">
+                <textPath href="#lpuTopArc" startOffset="50%" textAnchor="middle">
+                  LOVELY PROFESSIONAL UNIVERSITY
+                </textPath>
+              </text>
+              <text fontSize="7.2" fontWeight="800" fill="#111827" letterSpacing="0.9">
+                <textPath href="#lpuBottomArc" startOffset="50%" textAnchor="middle">
+                  PUNJAB (INDIA)
+                </textPath>
+              </text>
+            </svg>
+          </div>
 
-            <div className="backed-rating-stars">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-              </svg>
-            </div>
+          <div className="backed-campus-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M3 21h18"></path>
+              <path d="M5 21V7l7-4 7 4v14"></path>
+              <path d="M9 21v-6h6v6"></path>
+            </svg>
+            <span>PREMIER CAMPUS PARTNER</span>
+          </div>
 
-            <h3 className="backed-quote-title">
-              "SpotNplay managed over 45+ tournament brackets and 1,200 matches across 14 sports complexes flawlessly."
-            </h3>
+          <h3 className="backed-partner-title">LOVELY PROFESSIONAL UNIVERSITY</h3>
 
-            <p className="backed-quote-body">
-              The automated fixture generation and live score tracking solved our biggest logistics headache. Players love having real-time stats and immediate online booking confirmations.
-            </p>
+          <p className="backed-partner-desc">
+            Powering campus arena bookings, inter-college tournaments &amp; student athlete communities in Punjab, India.
+          </p>
 
-            <div className="backed-person-meta">
-              <div className="backed-avatar-initials">VK</div>
-              <div>
-                <h4>Vikramaditya Kulkarni</h4>
-                <p>Head of Sports Operations, Western India Youth League</p>
-              </div>
-            </div>
+          <div className="backed-partner-links">
+            <a href="#live-now" className="backed-link-primary">
+              Explore LPU Grounds →
+            </a>
+            <span className="backed-link-dot">•</span>
+            <a href="#join-coach" className="backed-link-muted">
+              Student Verification
+            </a>
           </div>
         </div>
       </div>
@@ -65,4 +81,3 @@ function BackedByBest() {
 }
 
 export default BackedByBest
-
