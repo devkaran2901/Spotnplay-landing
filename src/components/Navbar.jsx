@@ -24,11 +24,13 @@ function Navbar() {
 
         {/* Desktop & Mobile Navigation Links */}
         <div className={`nav-links ${mobileOpen ? 'mobile-visible' : ''}`}>
-          <a href="#live-now" onClick={() => setMobileOpen(false)}>Live Turfs</a>
+          <a href="#live-now" onClick={() => setMobileOpen(false)}>Live Arenas</a>
+          <a href="#popular-sports" onClick={() => setMobileOpen(false)}>Sports</a>
+          <a href="#join-coach" onClick={() => setMobileOpen(false)}>Coaches</a>
           <a href="#volunteer" onClick={() => setMobileOpen(false)}>Volunteer</a>
           <a href="#pricing" onClick={() => setMobileOpen(false)}>Pricing</a>
-          <a href="#download" onClick={() => setMobileOpen(false)}>Mobile App</a>
-          <a href="#backed" onClick={() => setMobileOpen(false)}>Endorsements</a>
+          <a href="#download" onClick={() => setMobileOpen(false)}>Get App</a>
+          <a href="#backed" onClick={() => setMobileOpen(false)}>Partners</a>
           
           {/* Mobile action buttons inside drawer */}
           <div className="nav-mobile-actions">

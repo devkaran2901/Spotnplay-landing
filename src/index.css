@@ -304,7 +304,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-split-grid {
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
+  grid-template-columns: 1.15fr 1fr;
   gap: 36px;
   align-items: center;
   margin-bottom: 36px;
@@ -1314,14 +1314,15 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== APP DOWNLOAD ===== */
 .app-download {
-  background: #ffffff;
+  background: var(--bg-subtle);
 }
 
 .app-download-box {
-  background: var(--green-tint);
-  border: 1px solid #bbf7d0;
-  border-radius: 26px;
-  padding: 32px 24px;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 36px 28px;
+  box-shadow: var(--shadow-lg);
 }
 
 .app-content {
@@ -1346,8 +1347,8 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   gap: 12px;
-  background: rgba(255, 255, 255, 0.78);
-  border: 1px solid #dcfce7;
+  background: #f8fafc;
+  border: 1px solid var(--border-soft);
   border-radius: 12px;
   padding: 11px 14px;
 }
@@ -1655,39 +1656,100 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
   background: #0f172a;
   color: #cbd5e1;
-  padding: 48px 0 90px;
+  padding: 56px 0 36px;
 }
 
-.footer-grid {
+.footer-top {
   display: grid;
-  grid-template-columns: 1.5fr repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 28px;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 36px;
+  margin-bottom: 36px;
 }
 
-.footer h4,
-.footer .nav-logo-text {
+.footer-brand .nav-logo {
+  margin-bottom: 14px;
+}
+
+.footer-brand .nav-logo-text {
   color: #ffffff;
-  margin-bottom: 10px;
 }
 
-.footer a {
-  display: block;
-  font-size: 0.85rem;
+.footer-brand p {
+  font-size: 0.86rem;
   color: #94a3b8;
-  margin-bottom: 6px;
+  line-height: 1.6;
+  max-width: 280px;
+  margin-bottom: 18px;
 }
 
-.footer a:hover {
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #1e293b;
+  color: #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.footer-social a:hover {
+  background: var(--green-bright);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.footer-column h4 {
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.footer-column a {
+  display: block;
+  font-size: 0.86rem;
+  color: #94a3b8;
+  margin-bottom: 9px;
+}
+
+.footer-column a:hover {
   color: var(--green-bright);
 }
 
 .footer-bottom {
   border-top: 1px solid #1e293b;
-  padding-top: 18px;
+  padding-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
   font-size: 0.8rem;
   color: #64748b;
-  text-align: center;
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-bottom-links a {
+  color: #94a3b8;
+}
+
+.footer-bottom-links a:hover {
+  color: #ffffff;
 }
 
 /* Sticky Mobile Bar */
@@ -1735,8 +1797,12 @@ h1, h2, h3, h4, h5, h6 {
   .volunteer-split-grid,
   .pricing-grid,
   .app-content,
-  .footer-grid {
+  .footer-top {
     grid-template-columns: 1fr;
+  }
+
+  .footer {
+    padding-bottom: 76px;
   }
 
   .hero-collage-frame {

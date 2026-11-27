@@ -21,7 +21,7 @@ function SportsRow() {
   const marqueeItems = [...sportsList, ...sportsList]
 
   return (
-    <section className="sports-row-section">
+    <section className="sports-row-section" id="popular-sports">
       <div className="container">
         <div className="sports-row-heading">
           <h2 className="sports-row-title">POPULAR SPORTS</h2>

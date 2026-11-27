@@ -15,6 +15,10 @@ function AppDownload() {
       desc: 'Automatic UPI share payment link'
     },
     {
+      title: 'Refer & Earn Rewards',
+      desc: 'Invite friends & earn cashback on every booking'
+    },
+    {
       title: 'Exclusive App Discounts',
       desc: 'Save up to 20% on off-peak hours'
     }
@@ -26,7 +30,7 @@ function AppDownload() {
         <div className="app-download-box">
           <div className="app-content">
             <div className="app-info">
-              <div className="live-pill-badge">MOBILE EXPERIENCE</div>
+              <div className="section-label">MOBILE EXPERIENCE</div>
               <h2 className="section-title">
                 PLAY FASTER <span className="highlight">ON ANDROID</span>
               </h2>

@@ -160,10 +160,6 @@ function LiveSection() {
     <section className="section live-section" id="live-now">
       <div className="container">
         <div className="live-section-header">
-          <div className="live-pill-badge">
-            <span className="live-dot"></span>
-            LIVE AVAILABILITY
-          </div>
           <h2 className="section-title">
             LIVE RIGHT <span className="highlight">NOW</span>
           </h2>
